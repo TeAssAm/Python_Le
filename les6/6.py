@@ -1,15 +1,15 @@
 class Road:
-    def __init__(self, _length, _width):
-        self._length = _length
-        self._width = _width
+    def __init__(self, length, width):
+        self._length = length
+        self._width = width
 
     def mass(self):
-        return self._length * self._width
+        return self.length * self._width
 
 
 class MassCount(Road):
-    def __init__(self, _length, _width, volume):
-        super().__init__(_length, _width)
+    def __init__(self, length, width, volume):
+        super().__init__(length, width)
         self.volume = volume
 
 

@@ -3,7 +3,7 @@ class Worker:
         self.name = name
         self.surname = surname
         self.position = position
-        self._income = {"wage": wage, "bonus": bonus}
+        self.income = {"wage": wage, "bonus": bonus}
 
 class Position(Worker):
     def __init__(self, name, surname, position, wage, bonus):
@@ -11,7 +11,7 @@ class Position(Worker):
     def get_full_name(self):
         return self.name + ' ' + self.surname
     def get_total_income(self):
-        return self._income.get('wage') + self._income.get('bonus')
+        return self.income.get('wage') + self.income.get('bonus')
 
 a = Position('AAA', 'WWW', 'QQQQ', 10000, 1234)
 print(a.get_full_name())
